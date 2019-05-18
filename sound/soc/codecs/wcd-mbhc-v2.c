@@ -854,7 +854,7 @@ static void wcd_mbhc_find_plug_and_report(struct wcd_mbhc *mbhc,
 				wcd_mbhc_report_plug(mbhc, 0, SND_JACK_HEADSET);
 
 		wcd_mbhc_report_plug(mbhc, 1, SND_JACK_UNSUPPORTED);
-		#else
+
 			/*
 			 * calculate impedance detection
 			 * If Zl and Zr > 20k then it is special accessory
@@ -885,7 +885,6 @@ static void wcd_mbhc_find_plug_and_report(struct wcd_mbhc *mbhc,
 					wcd_mbhc_report_plug(mbhc, 1, SND_JACK_UNSUPPORTED);
 				}
 			}
-		#endif
 
 	} else if (plug_type == MBHC_PLUG_TYPE_HEADSET) {
 		if (mbhc->mbhc_cfg->enable_anc_mic_detect)
