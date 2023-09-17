@@ -11,7 +11,7 @@ START=$(date +"%s")
 chat_id=-1001944300223
 export PATH="${PWD}/clang/bin:$PATH"
 export ARCH=arm64
-export KBUILD_BUILD_HOST=nekonime
+export KBUILD_BUILD_HOST=DESKTOP-ET3IKPU
 export KBUILD_BUILD_USER=idkser
 # sticker plox
 function sticker() {
