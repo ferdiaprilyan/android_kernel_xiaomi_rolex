@@ -4,7 +4,7 @@ git clone --depth=1 https://github.com/kdrag0n/proton-clang clang
 git clone --depth=1 https://github.com/dndxtz/AnyKernel3 AnyKernel
 echo "Done"
 tanggal=$(TZ=Asia/Jakarta date "+%Y%m%d-%H%M")
-ZIP_NAME="IdkSerKernel-Rolex-${tanggal}.zip"
+ZIP_NAME="SeraphineKernel-Rolex-${tanggal}.zip"
 IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz-dtb
 TANGGAL=$(date +"%F-%S")
 START=$(date +"%s")
@@ -15,13 +15,13 @@ export KBUILD_BUILD_HOST=DESKTOP-ET3IKPU
 export KBUILD_BUILD_USER=idkser
 # sticker plox
 function sticker() {
-    curl -s -X POST "https://api.telegram.org/bot728234533:AAHgxu6Y_PsExZNJoYiDgC74K_J-Ok0OaUk/sendSticker" \
+    curl -s -X POST "https://api.telegram.org/bot6498090143:AAHLOptNjpQDQsdy1kRdGdCTRRKr-zaGa94/sendSticker" \
         -d sticker="CAACAgEAAxkBAAEnKnJfZOFzBnwC3cPwiirjZdgTMBMLRAACugEAAkVfBy-aN927wS5blhsE" \
         -d chat_id=$chat_id
 }
 # Send info plox channel
 function sendinfo() {
-    curl -s -X POST "https://api.telegram.org/bot728234533:AAHgxu6Y_PsExZNJoYiDgC74K_J-Ok0OaUk/sendMessage" \
+    curl -s -X POST "https://api.telegram.org/bot6498090143:AAHLOptNjpQDQsdy1kRdGdCTRRKr-zaGa94/sendMessage" \
         -d chat_id="$chat_id" \
         -d "disable_web_page_preview=true" \
         -d "parse_mode=html" \
@@ -30,7 +30,7 @@ function sendinfo() {
 # Push kernel to channel
 function push() {
     cd AnyKernel
-    curl -F document=@$ZIP_NAME "https://api.telegram.org/bot728234533:AAHgxu6Y_PsExZNJoYiDgC74K_J-Ok0OaUk/sendDocument" \
+    curl -F document=@$ZIP_NAME "https://api.telegram.org/bot6498090143:AAHLOptNjpQDQsdy1kRdGdCTRRKr-zaGa94/sendDocument" \
         -F chat_id="$chat_id" \
         -F "disable_web_page_preview=true" \
         -F "parse_mode=html" \
@@ -38,7 +38,7 @@ function push() {
 }
 # Fin Error
 function finerr() {
-    curl -s -X POST "https://api.telegram.org/bot728234533:AAHgxu6Y_PsExZNJoYiDgC74K_J-Ok0OaUk/sendMessage" \
+    curl -s -X POST "https://api.telegram.org/bot6498090143:AAHLOptNjpQDQsdy1kRdGdCTRRKr-zaGa94/sendMessage" \
         -d chat_id="$chat_id" \
         -d "disable_web_page_preview=true" \
         -d "parse_mode=markdown" \
