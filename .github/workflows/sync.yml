@@ -1,0 +1,18 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          repository: dndxtz/android_kernel_xiaomi_rolex
+          ref: lineage-16.0
+
+      - run: |
+        git fetch origin
+        git pull origin lineage-16.0
