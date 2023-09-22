@@ -4,7 +4,7 @@ git clone --depth=1 https://github.com/kdrag0n/proton-clang clang
 git clone --depth=1 https://github.com/dndxtz/AnyKernel3 AnyKernel
 echo "Done"
 tanggal=$(TZ=Asia/Jakarta date "+%Y%m%d-%H%M")
-ZIP_NAME="SeraphineKernel-Rolex-${tanggal}.zip"
+ZIP_NAME="SaguineKernel-Rolex-${tanggal}.zip"
 IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz-dtb
 TANGGAL=$(date +"%F-%S")
 START=$(date +"%s")
